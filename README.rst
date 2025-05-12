@@ -11,7 +11,7 @@ Welcome to **PhaseFieldX**. `documentation <https://phasefieldx.readthedocs.io/e
 .. image:: https://readthedocs.org/projects/phasefieldx/badge/?version=latest
     :target: https://phasefieldx.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
-    
+
 .. image:: https://img.shields.io/pypi/v/phasefieldx
     :target: https://pypi.org/project/phasefieldx/
     :alt: PyPI Version
@@ -29,9 +29,9 @@ Welcome to **PhaseFieldX**. `documentation <https://phasefieldx.readthedocs.io/e
     :alt: Joss
 
 .. image:: https://github.com/CastillonMiguel/phasefieldx/actions/workflows/testing.yml/badge.svg
-    :target: https://github.com/CastillonMiguel/phasefieldx/actions/workflows/testing.yml   
+    :target: https://github.com/CastillonMiguel/phasefieldx/actions/workflows/testing.yml
     :alt: Unit Testing
- 
+
 
 Introduction
 ------------
@@ -48,10 +48,10 @@ Key Features
 - **Phase-Field Method:** The code employs the phase-field method, a versatile mathematical framework for modeling phenomena such as fracture, phase transitions, and pattern formation as diffuse processes. It enables the simulation of complex behaviors and multiple interacting phenomena within a unified framework.
 
 - **FEniCSx Integration:** Integrated with FEniCSx, a powerful finite element framework, the code provides robust capabilities for solving partial differential equations governing phase-field simulations. This integration ensures efficient computation and adaptive mesh refinement, enhancing simulation accuracy and scalability.
-  
+
 - **User-Friendly Interface:** Designed with usability in mind, the code features an intuitive interface for defining material properties, boundary conditions, and simulation parameters. This interface caters to both novice users and experienced researchers, facilitating straightforward setup and execution of simulations.
 
-- **Advanced Visualization:** The code includes advanced visualization tools to depict simulation results effectively. These tools enable comprehensive analysis of crack propagation, stress distributions, and other key quantities, supporting insightful interpretations and comparisons across simulations.
+- **Cross-Platform Visualization:** The code includes advanced visualization tools that work across different platforms. With support for multiple backends (Plotly, PyVista, and Matplotlib), users can visualize simulation results effectively regardless of their operating system. These tools enable comprehensive analysis of crack propagation, stress distributions, and other key quantities, supporting insightful interpretations and comparisons across simulations. See the `visualization guide <docs/visualization_guide.md>`_ for more details.
 
 
 Installation Instructions
@@ -61,34 +61,40 @@ To use this repository, you need to have the latest stable release of FEniCSx in
 Follow these steps to set up your environment:
 
 1. Create a new conda environment
-   
+
    .. code-block::
-   
+
       conda create -n phasefieldx-env
 
 2. Activate the new environment
-   
+
    .. code-block::
-   
+
       conda activate phasefieldx-env
 
 3. Install FEniCSx, `mpi4py`, `numpy`, `pandas`, ... from the `conda-forge` channel:
-   
+
    .. code-block:: sh
-   
-      conda install -c conda-forge fenics-dolfinx=0.9.0 mpi4py numpy pyvista pandas pyvista
+
+      conda install -c conda-forge fenics-dolfinx=0.9.0 mpi4py numpy pyvista pandas matplotlib
+
+   For enhanced cross-platform visualization, install Plotly:
+
+   .. code-block:: sh
+
+      pip install plotly
 
 4. Install `gmsh`
-   
+
    .. code-block::
-   
+
       pip install --upgrade gmsh
-   
+
 
 5. Finally, install the code from this repository
-   
+
    .. code-block::
-   
+
       pip install phasefieldx
 
 
@@ -133,15 +139,15 @@ BibTex:
 
 .. code:: latex
 
-    @article{Castillon2025phasefieldx, 
-      doi = {10.21105/joss.07307}, 
-      url = {https://doi.org/10.21105/joss.07307}, 
-      year = {2025}, 
-      publisher = {The Open Journal}, 
-      volume = {10}, 
-      number = {108}, 
+    @article{Castillon2025phasefieldx,
+      doi = {10.21105/joss.07307},
+      url = {https://doi.org/10.21105/joss.07307},
+      year = {2025},
+      publisher = {The Open Journal},
+      volume = {10},
+      number = {108},
       pages = {7307},
-      author = {Miguel Castillón}, 
+      author = {Miguel Castillón},
       title = {PhaseFieldX: An Open-Source Framework for Advanced Phase-Field Simulations},
-      journal = {Journal of Open Source Software} 
+      journal = {Journal of Open Source Software}
     }
